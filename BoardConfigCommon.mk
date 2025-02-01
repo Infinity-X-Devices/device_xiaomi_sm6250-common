@@ -60,7 +60,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/bliss/config/device_framework_matrix.xml
+    vendor/infinity/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
@@ -125,7 +125,7 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
-ifeq ($(BLISS_BUILD_VARIANT),gapps)
+ifeq ($(WITH_GAPPS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 209715200
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 104857600
 else
@@ -175,7 +175,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2023-05-01
 
 # Sepolicy
-include device/bliss/sepolicy/libperfmgr/sepolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor

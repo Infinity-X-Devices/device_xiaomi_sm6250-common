@@ -1,3 +1,9 @@
+# About phone
+ro.infinity.soc=Snapdragon 720G
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080 x 2400, 60 Hz
+ro.infinity.camera=48/64MP + 16/32MP
+
 # Audio
 audio.offload.min.duration.secs=30
 

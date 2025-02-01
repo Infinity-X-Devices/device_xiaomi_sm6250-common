@@ -146,10 +146,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
-
 # Media
 PRODUCT_PACKAGES += \
     media_codecs_performance.xml \
@@ -277,7 +273,7 @@ PRODUCT_SOONG_NAMESPACES += \
     bootable/deprecated-ota \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/bliss/interfaces/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi
 
